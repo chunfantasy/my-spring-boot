@@ -1,11 +1,7 @@
 package chun.api.dao
 
-import blog.Article
-import blog.User
-import org.springframework.data.repository.CrudRepository
+import chun.api.model.UserInfo
 
-interface ArticleRepository : CrudRepository<Article, Long> {
-	fun findAllByOrderByAddedAtDesc(): Iterable<Article>
+interface UserRepository  {
+	fun findAll(): Iterable<UserInfo>
 }
-
-interface UserRepository : CrudRepository<User, String>
